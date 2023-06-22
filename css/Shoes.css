@@ -1,0 +1,260 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: whitesmoke;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgb(19, 6, 6);
+    color: white;
+    border-bottom: 1px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover{
+    color: black;
+    background-color: white;
+    padding: 4px;
+    transition: 0.5s;
+}
+
+.Main-Shoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#Search-shoes{
+    margin-top: 30px;
+    width: 800px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.Name-Website{
+    margin-right: 100px;
+    margin-top: 20px;
+}
+
+.cari{
+    margin-top: 25px;
+    margin-left: 30px;
+    padding: 15px 15px 15px 15px;
+    font-weight: 1000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.cari:hover{
+    background-color: black;
+    color: white;
+}
+
+.Shoes-shop{
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 50px;
+   gap: 30px;
+}
+
+.Products{
+    width: 300px;
+    background-color: black;
+    margin:auto;
+    color: white;
+    border: white;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 10px black;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.Products-img img{
+    width: 100%;
+    border-radius: 30px;
+}
+
+.Products-text h3{
+    font-size: 20px;
+    margin-left: 2px;
+}
+
+.Products-text p{
+    font-size: 18px;
+}
+
+.Products-text .Size-number{
+    list-style: none;
+    display: flex;
+    gap: 6px;
+    font-size: 16px;
+}
+
+.Products-text .Size-number li{
+    border: 2px solid;
+    color: white;
+    height: 20px;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.Products-text .Size-number li:hover{
+    background-color: white;
+    color: black;
+    font-weight: 900;
+}
+
+.Products-text #Buy-items{
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  background-color: black;
+  color: white;
+  height: 40px;
+  transition: 0.2s ease-in;
+}
+
+.Products-text #Buy-items:hover{
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    padding: 5px;
+}
+
+.garis-tiga{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.garis-tiga input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    z-index: 999;
+    cursor: pointer;
+} 
+
+.garis-tiga span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: 1s;
+}
+
+.garis-tiga span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.garis-tiga span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.garis-tiga input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.garis-tiga input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+
+.garis-tiga input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+/*Responsive tools Tablet*/
+@media screen and (min-width: 768px){
+    nav ul{
+        width: 50%;
+    }
+}
+
+/*Responsive tools desktop*/
+@media screen and (min-width: 992px){
+    nav ul{
+        width: 35%;
+    }
+}
+
+/*Responsive tools Hp*/
+@media screen and (max-width: 768px){
+    .garis-tiga{
+        display: flex;
+    }
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-evenly;
+        background-color: black;
+        flex-direction: column;
+        z-index: -1;
+        transition: all .2s;
+        transform: translateX(100%);
+        opacity: 0;
+
+    }
+
+    nav ul.muncul-responsive{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .Main-Shoes{
+       display: grid;
+       place-items: center;
+    }
+    .Name-Website{
+      margin-left: 110px;
+    }
+    #Search-shoes{
+        width: 300px;
+    }
+    .cari{
+        margin-right: 40px;
+    }
+
+}

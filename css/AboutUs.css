@@ -1,0 +1,242 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow-x: hidden;
+    background-image: url("../Assets/Background-Aboutpage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgb(19, 6, 6);
+    color: white;
+    border-bottom: 1px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+}
+
+nav ul li a:hover{
+    color: black;
+    background-color: white;
+    padding: 4px;
+    transition: 0.5s;
+}
+
+.About-Us{
+    padding: 30px;
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.About-Us-History{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10px;
+   background: transparent;
+   color: white;
+}
+
+.About-Us-History p{
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.About-Us-Contact{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+.Contact{
+    width: 300px;
+    background-color: white;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.Contact-img img{
+    width: 150px;
+    height: 150px;
+}
+
+.Contact-Text{
+    font-size: 18px;
+}
+
+.About-Us-Skills{
+    color: white;
+    text-align: center;
+}
+
+.About-Us-Certificate{
+    display: flex;
+	flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0 30px 30px;
+}
+
+.Certificate{
+    width: 300px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 30px;
+}
+
+.Certificate-img img{
+    width: 300px;
+    height: 200px;
+	border-radius: 20px;
+}
+
+.Certificate-Caption p{
+    font-size: 16px;
+    text-align: justify;
+    padding: 5px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 10;
+    text-align: center;
+    z-index: 99;
+}
+
+.Message-Website{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 5px;
+}
+
+.Designed-footer{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.garis-tiga{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.garis-tiga input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    z-index: 999;
+    cursor: pointer;
+} 
+
+.garis-tiga span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: 1s;
+}
+
+.garis-tiga span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.garis-tiga span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.garis-tiga input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.garis-tiga input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+
+.garis-tiga input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+/*Responsive tools Tablet*/
+@media screen and (min-width: 768px){
+    nav ul{
+        width: 50%;
+    }
+}
+
+/*Responsive tools desktop*/
+@media screen and (min-width: 992px){
+    nav ul{
+        width: 35%;
+    }
+}
+
+/*Responsive tools Hp*/
+@media screen and (max-width: 768px){
+    .garis-tiga{
+        display: flex;
+    }
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-evenly;
+        background-color: black;
+        flex-direction: column;
+        z-index: -1;
+        transition: all .2s;
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    nav ul.muncul-responsive{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    footer{
+        font-size: 20px;
+    }
+    /* .About-Us-Certificate{
+        align-items: center;
+    } */
+}

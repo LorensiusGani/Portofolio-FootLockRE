@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootLockRE Company</title>
+    <link rel="stylesheet" href="../css/Subscribe.css">
+    <link rel="shortcut icon" href="../Assets/Logo-FootlockRE.jpg" type="image/x-icon">
+</head>
+<body>
+    <!--NAVBAR UNTUK WEBSITE-->
+    <!--Start-->
+    <nav>
+        <div class="MyLogoCompany">
+            <h2>FootLockRE</h2>
+        </div>
+        <ul>
+            <li><a href="../Html/Home.html">HOME</a></li>
+            <li><a href="../Html/Shoes.html">SHOES</a></li>
+            <li><a href="../Html/AboutUs.html">ABOUT US</a></li>
+            <li><a href="../Html/Event.html">EVENTS</a></li>
+            <li><a href="">SUBSCRIBE</a></li>
+        </ul>
+
+        <!--Untuk responsive menu navbar-->
+        <div class="garis-tiga">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <!--END-->
+
+    <div class="Subscription-Form">
+        <div class="Title-of-Form">SUBSCRIPTION</div>
+        <form action="#">
+            <div class="User">
+                <div class="Input-Form">
+                    <label for="">FULL NAME</label>
+                    <input type="text" placeholder="Enter your full name" name="" id="username">
+                </div>
+                <div class="Input-Form">
+                    <label for="">EMAIL</label>
+                    <input type="text" placeholder="Enter your Email" name="" id="email">
+                </div>
+                <div class="Input-Form">
+                    <label for="">PHONE</label>
+                    <input type="text" placeholder="Enter your Phone Number" name="" id="phone">
+                </div>
+                <div class="Input-Form">
+                    <label for="Country">COUNTRY</label>
+                    <select name="Country" id="Country">
+                        <option value="empty">Choose One</option>
+                        <option value="">Indonesia</option>
+                        <option value="">England</option>
+                        <option value="">Singapore</option>
+                        <option value="">Spanyol</option>
+                        <option value="">Portugal</option>
+                    </select>
+                </div>
+                <div class="Terms">
+                    <input type="checkbox" name="" id="Checkbox">
+                    <p>You Must agree terms and conditions</p>
+                </div>
+            </div>
+            <div class="button-submit">
+                <button onclick="SubmitValidation()">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../Js/website.js"></script>
+    <script src="../Js/validation.js"></script>
+</body>
+</html>
