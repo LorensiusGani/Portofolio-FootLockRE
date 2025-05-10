@@ -77,10 +77,12 @@ nav ul li a:hover{
 }
 
 .Shoes-shop{
-   display: flex;
-   flex-wrap: wrap;
-   margin-top: 50px;
-   gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* atau space-between */
+  margin-top: 50px;
+  gap: 15px;
+
 }
 
 .Products{
